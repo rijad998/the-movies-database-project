@@ -1,0 +1,35 @@
+// import React from 'react';
+// import axios from 'axios';
+// import { actions } from '../constants/actions';
+// import { TMDBContext } from '../stateMangement/provider';
+// import { categories } from '../constants/categories';
+// import { BASE_API_URL, API_KEY, BASE_PARAMS} from '../config/api';
+
+// export default function PerformSearch (data: any ) {
+//     const { dispatch } = React.useContext(TMDBContext);
+
+//     const finalRes = {
+//         search: data.search,
+//         category: data.category,
+//         result: {}
+//     }
+    
+//     const searchCategory = data.category === categories.MOVIES ? 'movie' : 'tv';
+
+//     if (data.search.length > 3){
+//         // search
+//         axios.get(`${BASE_API_URL}/search/${searchCategory}?${API_KEY}&${BASE_PARAMS}&query=${data.search}`)
+//         .then((res) => {
+//             finalRes.result = res.data
+//             dispatch({ type: actions.SEARCH, action: finalRes})
+//         })
+//     } else {
+//         // top 10
+//         axios.get(`${BASE_API_URL}/${searchCategory}/top_rated?${API_KEY}&${BASE_PARAMS}`)
+//         .then((res) => {
+//             finalRes.result = res.data
+//             dispatch({ type: actions.SEARCH, action: finalRes})
+//         })
+//     }
+// }
+
